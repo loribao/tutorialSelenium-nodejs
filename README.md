@@ -13,10 +13,25 @@ Data:  23/03/2019
    - DevTools Documentação: https://developers.google.com/web/tools/chrome-devtools/?hl=pt-br
    - JavaScript DOM:  https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM
 ## 1 - Ambiente de desenvolvimento 1
- - instalação visual code, nodejs, npm
  - instalando: selenium-webdriver e chromedriver
  - criando o projeto: ** Ola mundo **
-
+## 2 - Comandos basicos
+ - executando javascript, screenshot 
+ - getPageSource()
+ - ...
+## 3 - Buscando e manipulando Elemento em DOM e suas hierarquia
+ - Classe By
+ - função findElement
+## 4 - Buscando e manipulando elemento: part 2
+ - função findElements
+ - xpath
+ - teste de existencia
+## 5 - comandos basicos de mause e teclado 
+ - key
+ - botton
+## 6 - wait() 
+   - aguardar elemento ou elementos
+## 
 ## Exemplos
 
 ### 0 - Introdução 
