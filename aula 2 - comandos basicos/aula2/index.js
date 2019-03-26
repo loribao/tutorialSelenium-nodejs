@@ -24,29 +24,39 @@ var obtemElemento = async (chrome) => {
      *  ,busca por javascript e css ...
      *  mas trataremos desses metodos em video posterior da nossa playlist, pois é um assunto que merece uma tenção especial.
      */
-
+	 /**
+	 /*A classe By retorna em suas funções de busca objetos js proprios para 
+	 /*para pesquisa com a função findElement(s) da instância do Chrome que fizemos
+	 /*
+	 /*		*/
 
     /**
-     * busca pela propriedade 'id' na pagina e retorna apenas um elemento
+     * busca pela propriedade 'id' na pagina e retorna apenas um elemento quando usado com find
      */
     var metodoPesquisa1 = await selenium.By.id('WikiaPage');
 
     /**
-     * busca pela propriedade  de classe e pode retornar muitos elementos
+     * busca pela propriedade  de classe e pode retornar muitos elementos quando usado com find
      */
     var metodoPesquisa2 = await selenium.By.className('wds-tabs__tab');
 
     /**
-     *  apenas um objeto comum do java script
+     *  apenas um objeto comum do javascript 
      */
     var metodoPesquisa3 = {
         id: 'WikiaPage'
     };
+	/* As funções find da nossa instância do navegador e o que o Selenium denomina
+	/* de webElement que é uma abstração dos nossos objtos do html (<tags>)
+	/* daqui ja fica fácil entender que a classe By são apenas os métodos de busca 
+	/* enquanto que no find podemos manipular nossos objetos,
+	/* encontrados por ele mesmo com os parâmetros fornecido
+	/* pelas funções da classe By.	
+	/*	*/
 
-
-    var element = await chrome.findElement(metodoPesquisa1);
-    var elements = await chrome.findElements(metodoPesquisa2);
-    var elementObjeto = await chrome.findElement(metodoPesquisa3);
+    var element = await chrome.findElement(metodoPesquisa1);// obtem o primeiro objeto encontrado
+    var elements = await chrome.findElements(metodoPesquisa2); // obtem um array de objetos encontrados
+    var elementObjeto = await chrome.findElement(metodoPesquisa3);// mesmo que o primeiro
 
     console.dir(element);
     console.dir(elements);
