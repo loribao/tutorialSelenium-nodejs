@@ -63,7 +63,13 @@ var obtemElemento = async (chrome) => {
     console.dir(elementObjeto);
 
 }
-
+/**
+/* para excutar um snippet jo contexto da página em execução 
+/* usacomos a função executeScript () que pede como parametro
+/* primeiro parâmetro obrigatório o código JavaScript como string ou uma função
+/* e de maneira opcional a passagem de um argumento que será visível 
+/* no contexto da página e para o nosso código de manipulação, o tipo pode ser objeto, array webelement ...
+/*	*/
 var executandojavaScript = async (chrome) => {
 
     await chrome.executeScript(() => {
@@ -75,18 +81,22 @@ var executandojavaScript2 = async (chrome) => {
     var argumento = "Executando javascript!!!!!!!!!!!!!! a revanche";
 
     await chrome.executeScript(
+    	
         (argumento) => {
                 var wikiaPagina = window.document.getElementById('WikiaPage');
                 wikiaPagina.innerHTML = '<p><h2>'+argumento+'</h2></p>';
-            }, argumento);
+            }, argumento); // a variavel que foi passada como argumento da função.
 
 }
 
+
+
+
 var obtendoInfo = async (chrome)=>{
 
-   await chrome.getTitle().then((titulo)=>{console.log('esse é o titulo -->>'+titulo)});
-   await  chrome.getCurrentUrl().then((url)=>{console.log('esse é a url-->>'+url)})
-   await  chrome.getPageSource().then((codigoHtml)=>{console.log('eis o fonte da pagina lol -->>'+codigoHtml)})
+   await  chrome.getTitle().then((titulo)=>{console.log('esse é o titulo -->>'+titulo)});
+   await  chrome.getCurrentUrl().then((url)=>{console.log('essa é a url-->>'+url)})
+   await  chrome.getPageSource().then((codigoHtml)=>{console.log('eis o fonte da pagina !o! -->>'+codigoHtml)})
 
 }
 
@@ -100,3 +110,4 @@ var main = async () => {
     await obtendoInfo(chrome);
 }
 main();
+    
