@@ -16,16 +16,21 @@ Data:  23/03/2019
  - instalando: selenium-webdriver e chromedriver
  - criando o projeto: ** Ola mundo **
 ## 2 - Comandos basicos
- - executando javascript, screenshot 
- - getPageSource()
+ - executando javascript 
+ - findElement's(), getTitle(),getCurrentUrl, getPageSource(), 
  - ...
+ 
 ## 3 - Buscando e manipulando Elemento em DOM e suas hierarquia
  - Classe By
  - função findElement
 ## 4 - Buscando e manipulando elemento: part 2
  - função findElements
  - xpath
- - teste de existencia
+ - cssSelector 
+ - testes de existencia
+ - Referencias
+   - https://www.w3schools.com/cssref/css_selectors.asp
+   - https://www.w3schools.com/xml/xml_xpath.asp
 ## 5 - comandos basicos de mause e teclado 
  - key
  - botton
